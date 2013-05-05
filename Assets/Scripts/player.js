@@ -1,5 +1,9 @@
 
 
+
+
+var myCurrTarget: GameObject = null;
+
 function Start () {
 
 }
@@ -17,10 +21,12 @@ if (Input.GetMouseButtonDown(0)) {
             if (Physics.Raycast(ray, hit)) {
             	if(hit.collider.gameObject.tag == "npc"){
              		var targetPosition = hit.point;
+             		myCurrTarget = hit.collider.gameObject;
+             		//print("myCurrTarget = "+ myCurrTarget.name);
              		var targetRotation = Quaternion.LookRotation(targetPosition - transform.position);
 					transform.rotation = targetRotation;
                     
-                    print("npc HIT");
+                    //print("npc HIT");
               
          }                                                                                                    
     }
