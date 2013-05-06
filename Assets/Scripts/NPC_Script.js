@@ -30,8 +30,10 @@ function Start () {
 
 myCurrTarget = iNoLike1; 
   
-  print("I NO LIKE: " + iNoLike1);
+  //print("I NO LIKE: " + iNoLike1);
   targetRotation = Quaternion.LookRotation(iNoLike1.transform.position - iAm.transform.position);
+  targetRotation.x = 0.0;
+  targetRotation.y = 0.0;
   transform.rotation = targetRotation;
   
   
@@ -45,34 +47,43 @@ function Update () {
 
 //print("MainCharacter_AimState_IS: "+ sceneManager.mainCharacter_aimState);
 
+//print("This gameObject is " + gameObject);
+//print("This aimstate name " +sceneManager.npc_black1_aimState.name); 
 
-
-if(sceneManager.npc_black1_aimState == Object.name){
+if(sceneManager.npc_black1_aimState == gameObject){
 		
 		myAttackersName	= "black1";
-		print("myAttackersName is " +myAttackersName ); 	
+		//print("myAttackersName is " +myAttackersName ); 	
 		
 		}
 		
-	if(sceneManager.npc_white1_aimState == Object.name){
+	if(sceneManager.npc_white1_aimState == gameObject){
 		
 		myAttackersName	= "white1"; 
-		print("myAttackersName is " + myAttackersName ); 	
+		//print("myAttackersName is " + myAttackersName ); 	
 		
 		}
 	
-	if(sceneManager.npc_grey1_aimState == Object.name){
+	if(sceneManager.npc_grey1_aimState == gameObject){
 		
 		myAttackersName	= "grey1"; 	
-		print("myAttackersName is " + myAttackersName ); 	
+		//print("myAttackersName is " + myAttackersName ); 	
 		
 		}
 		
-	if(sceneManager.mainCharacter_aimState == Object.name){
+	if(sceneManager.mainCharacter_aimState == gameObject){
 		
 		myAttackersName	= "mainCharacter"; 	
-		print("myAttackersName is " + myAttackersName ); 	
+		//print("myAttackersName is " + myAttackersName ); 	
+		
 		}	
+		
+	if(sceneManager.lady_aimState == gameObject){
+		
+		myAttackersName	= "Lady"; 	
+		//print("myAttackersName is " + myAttackersName ); 	
+		
+		}
 
 
 
@@ -80,7 +91,7 @@ switch (myAttackersName)
 {
 	case("black1"):
 	//rotate to aim at
-	print("I should be rotating towards black1");
+	//print("I should be rotating towards black1");
 	targetRotation = Quaternion.LookRotation(sceneManager.npc_black1.transform.position - transform.position);
 	transform.rotation = targetRotation;
 	myCurrTarget = sceneManager.npc_black1;
@@ -89,7 +100,7 @@ switch (myAttackersName)
 	
 	case("white1"):
 	//rotate to aim at
-	print("I should be rotating towards white1");
+	//print("I should be rotating towards white1");
 	targetRotation = Quaternion.LookRotation(sceneManager.npc_white1.transform.position - transform.position);
 	transform.rotation = targetRotation;
 	myCurrTarget = sceneManager.npc_white1;
@@ -98,7 +109,7 @@ switch (myAttackersName)
 	
 	case("grey1"):
 	//rotate to aim at
-	print("I should be rotating towards grey1");
+	//print("I should be rotating towards grey1");
 	targetRotation = Quaternion.LookRotation(sceneManager.npc_grey1.transform.position - transform.position);
 	transform.rotation = targetRotation;
 	myCurrTarget = sceneManager.npc_grey1;
@@ -107,11 +118,20 @@ switch (myAttackersName)
 
 	case("mainCharacter"):
 	//rotate to aim at
-	print("I should be rotating towards mainCharacter");
+	//print("I should be rotating towards mainCharacter");
 	targetRotation = Quaternion.LookRotation(sceneManager.mainCharacter.transform.position - transform.position);
 	transform.rotation = targetRotation;
-	print("My Target is going to be the MAIN GUY");
+	//print("My Target is going to be the MAIN GUY");
 	myCurrTarget = sceneManager.mainCharacter;
+	break;
+	
+		case("Lady"):
+	//rotate to aim at
+	//print("I should be rotating towards mainCharacter");
+	targetRotation = Quaternion.LookRotation(sceneManager.lady.transform.position - transform.position);
+	transform.rotation = targetRotation;
+	//print("My Target is going to be the MAIN GUY");
+	myCurrTarget = sceneManager.lady;
 	break;
 	
 	}
