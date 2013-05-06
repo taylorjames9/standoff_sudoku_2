@@ -2,12 +2,12 @@
 
 
 
-var myCurrTarget: GameObject;
+var myCurrTargetPlayer: GameObject;
 var iNoLike1: GameObject;
 
 function Start () {
 
-  myCurrTarget = iNoLike1; 
+  myCurrTargetPlayer = iNoLike1; 
 
   var targetRotato = Quaternion.LookRotation(iNoLike1.transform.position - transform.position);
   //targetRotato.x = 0.0;
@@ -27,8 +27,8 @@ if (Input.GetMouseButtonDown(0)) {
             if (Physics.Raycast(ray, hit)) {
             	if(hit.collider.gameObject.tag == "npc"){
              		var targetPosition = hit.point;
-             		myCurrTarget = hit.collider.gameObject;
-             		print("myCurrTarget = "+ myCurrTarget.name);
+             		myCurrTargetPlayer = hit.collider.gameObject;
+             		print("myCurrTargetPlayer = "+ myCurrTargetPlayer.name);
              		
              		var targetRotation = Quaternion.LookRotation(targetPosition - transform.position);
 					//targetRotation.x = 0.0;

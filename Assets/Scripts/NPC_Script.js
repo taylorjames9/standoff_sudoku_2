@@ -14,7 +14,7 @@ var frequnecyOfBullets: float;
 var amAlive: boolean = true;
 
 //var myThreat: GameObject = null;
-var myCurrTarget: GameObject;
+var myCurrTarget0: GameObject;
 
 var sceneManager : SceneManagerScript;
 var playerScript : player;
@@ -28,7 +28,7 @@ function Start () {
 //var RandomNum = Random.Range(1, 3);
 //myCurrTarget = ("iNoLike"+[RandomNum]); 
 
-  myCurrTarget = iNoLike1; 
+  myCurrTarget0 = iNoLike1; 
   targetRotation = Quaternion.LookRotation(iNoLike1.transform.position - iAm.transform.position);
   targetRotation.x = 0.0;
   targetRotation.y = 0.0;
@@ -85,7 +85,7 @@ switch (myAttackersName)
 	//print("I should be rotating towards black1");
 	targetRotation = Quaternion.LookRotation(sceneManager.npc_black1.transform.position - transform.position);
 	transform.rotation = targetRotation;
-	myCurrTarget = sceneManager.npc_black1;
+	myCurrTarget0 = sceneManager.npc_black1;
 	
 	break;
 	
@@ -94,7 +94,7 @@ switch (myAttackersName)
 	//print("I should be rotating towards white1");
 	targetRotation = Quaternion.LookRotation(sceneManager.npc_white1.transform.position - transform.position);
 	transform.rotation = targetRotation;
-	myCurrTarget = sceneManager.npc_white1;
+	myCurrTarget0 = sceneManager.npc_white1;
 	
 	break;
 	
@@ -103,7 +103,7 @@ switch (myAttackersName)
 	//print("I should be rotating towards grey1");
 	targetRotation = Quaternion.LookRotation(sceneManager.npc_grey1.transform.position - transform.position);
 	transform.rotation = targetRotation;
-	myCurrTarget = sceneManager.npc_grey1;
+	myCurrTarget0 = sceneManager.npc_grey1;
 	
 	break;
 
@@ -113,16 +113,16 @@ switch (myAttackersName)
 	targetRotation = Quaternion.LookRotation(sceneManager.mainCharacter.transform.position - transform.position);
 	transform.rotation = targetRotation;
 	//print("My Target is going to be the MAIN GUY");
-	myCurrTarget = sceneManager.mainCharacter;
+	myCurrTarget0 = sceneManager.mainCharacter;
 	break;
 	
-		case("Lady"):
+    case("Lady"):
 	//rotate to aim at
 	//print("I should be rotating towards mainCharacter");
 	targetRotation = Quaternion.LookRotation(sceneManager.lady.transform.position - transform.position);
 	transform.rotation = targetRotation;
 	//print("My Target is going to be the MAIN GUY");
-	myCurrTarget = sceneManager.lady;
+	myCurrTarget0 = sceneManager.lady;
 	break;
 	
 	}

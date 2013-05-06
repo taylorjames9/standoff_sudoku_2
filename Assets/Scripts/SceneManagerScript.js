@@ -11,23 +11,17 @@ var npc_grey1isThreatened = boolean;
 var mainCharacter_isThreatened = boolean;
 var lady_isThreatened = boolean;
 
-var npc_black1_script = null;
-var npc_white1_script = null;
-var npc_grey1_script = null;
-var mainCharacter_script = null;
-var lady_script = null;
+//private var npc_black1_script: NPC_Script = npc_black1.GetComponent("NPC_Script");
+//private var npc_white1_script: Component;
+//private var npc_grey1_script: Component;
+//private var mainCharacter_script: Component;
+//private var lady_script: Component;
 
-npc_black1_script = npc_black1.GetComponent("NPC_Script");
-npc_white1_script = npc_white1.GetComponent("NPC_Script");
-npc_grey1_script = npc_grey1.GetComponent("NPC_Script");
-mainCharacter_script = mainCharacter.GetComponent("player");
-lady_script = lady.GetComponent("NPC_Script");
-
-var npc_black1_aimState = null;
-var npc_white1_aimState = null;
-var npc_grey1_aimState = null;
-var mainCharacter_aimState = null;
-var lady_aimState = null;
+var npc_black1_aimState: GameObject;
+var npc_white1_aimState: GameObject;
+var npc_grey1_aimState: GameObject;
+var mainCharacter_aimState : GameObject;
+var lady_aimState : GameObject;
 
 function Start () {
 
@@ -36,6 +30,7 @@ npc_white1_aimState = npc_black1;
 npc_grey1_aimState = npc_black1;
 mainCharacter_aimState = npc_black1;
 lady_aimState = npc_grey1;
+
 
 
 }
@@ -48,11 +43,19 @@ function Update () {
 
 //keeps track of who is aiming at whom
 
-npc_black1_aimState = npc_black1_script.myCurrTarget;
-npc_white1_aimState = npc_white1_script.myCurrTarget;
-npc_grey1_aimState = npc_grey1_script.myCurrTarget;
-mainCharacter_aimState = mainCharacter_script.myCurrTarget;
-lady_aimState = lady_script.myCurrTarget;
+//print("npc_black1_aimState " + npc_black1_aimState);
+
+var npc_black1_script: NPC_Script = npc_black1.GetComponent("NPC_Script");
+var npc_white1_script: NPC_Script= npc_white1.GetComponent("NPC_Script");
+var npc_grey1_script: NPC_Script = npc_grey1.GetComponent("NPC_Script");
+var mainCharacter_script: player = mainCharacter.GetComponent("player");
+var lady_script: NPC_Script = lady.GetComponent("NPC_Script");
+
+npc_black1_aimState = npc_black1_script.myCurrTarget0;
+npc_white1_aimState = npc_white1_script.myCurrTarget0;
+npc_grey1_aimState = npc_grey1_script.myCurrTarget0;
+mainCharacter_aimState = mainCharacter_script.myCurrTargetPlayer;
+lady_aimState = lady_script.myCurrTarget0;
 
 //print("SceneManager Knows the Main Character CurrTarget is" + mainCharacter_script.myCurrTarget); 
 
