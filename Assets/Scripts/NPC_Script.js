@@ -37,10 +37,13 @@ function Start () {
 
 function Update () {
 
-//myAttackerIs();
-//iAimAt();
 
 
+myAttackerIs();
+iAimAt();
+
+}
+function myAttackerIs(){
 if(sceneManager.npc_black1_aimState == gameObject){
 		
 		myAttackersName	= "black1";
@@ -75,9 +78,9 @@ if(sceneManager.npc_black1_aimState == gameObject){
 		//print("myAttackersName is " + myAttackersName ); 	
 		
 		}
+}
 
-
-
+function iAimAt(){
 switch (myAttackersName)
 {
 	case("black1"):
