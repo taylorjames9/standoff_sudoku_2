@@ -1,4 +1,8 @@
-#pragma strict
+
+
+
+var shotFired: boolean = false;
+
 
 function Start () {
 

@@ -50,6 +50,8 @@
      <Compile Include="Assets\Scripts\Player_Simple.js" />
      <Compile Include="Assets\Scripts\SceneManagerScript.js" />
      <Compile Include="Assets\Scripts\SceneManager_Simple.js" />
+     <Compile Include="Assets\Scripts\bulletScript.js" />
+     <Compile Include="Assets\Scripts\gotHit.js" />
      <Compile Include="Assets\Scripts\player.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

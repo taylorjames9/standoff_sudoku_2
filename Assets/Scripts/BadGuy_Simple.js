@@ -41,6 +41,11 @@ function Update () {
 		targetRotation = Quaternion.LookRotation(myCurrTarget.transform.position - transform.position);
 		transform.rotation = targetRotation;
 		}
+		
+	if(sceneManager.shotFired){
+	//function: I fire my bullets at a steady rate at my target. 
+	
+	}	
 }
 
 function Switch(){
