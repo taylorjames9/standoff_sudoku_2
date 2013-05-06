@@ -14,7 +14,7 @@ var frequnecyOfBullets: float;
 var amAlive: boolean = true;
 
 //var myThreat: GameObject = null;
-var myCurrTarget: GameObject = null;
+var myCurrTarget: GameObject;
 
 var sceneManager : SceneManagerScript;
 var playerScript : player;
@@ -28,15 +28,11 @@ function Start () {
 //var RandomNum = Random.Range(1, 3);
 //myCurrTarget = ("iNoLike"+[RandomNum]); 
 
-myCurrTarget = iNoLike1; 
-  
-  //print("I NO LIKE: " + iNoLike1);
+  myCurrTarget = iNoLike1; 
   targetRotation = Quaternion.LookRotation(iNoLike1.transform.position - iAm.transform.position);
   targetRotation.x = 0.0;
   targetRotation.y = 0.0;
   transform.rotation = targetRotation;
-  
-  
 }
 
 function Update () {
@@ -44,11 +40,6 @@ function Update () {
 //myAttackerIs();
 //iAimAt();
 
-
-//print("MainCharacter_AimState_IS: "+ sceneManager.mainCharacter_aimState);
-
-//print("This gameObject is " + gameObject);
-//print("This aimstate name " +sceneManager.npc_black1_aimState.name); 
 
 if(sceneManager.npc_black1_aimState == gameObject){
 		

@@ -2,14 +2,18 @@
 
 
 
-var myCurrTarget: GameObject = null;
+var myCurrTarget: GameObject;
 var iNoLike1: GameObject;
 
 function Start () {
-  targetRotation = Quaternion.LookRotation(iNoLike1.transform.position - transform.position);
-  targetRotation.x = 0.0;
-  targetRotation.y = 0.0;
-  transform.rotation = targetRotation;
+
+  myCurrTarget = iNoLike1; 
+
+  var targetRotato = Quaternion.LookRotation(iNoLike1.transform.position - transform.position);
+  //targetRotato.x = 0.0;
+  //targetRotato.y = 0.0;
+  transform.rotation = targetRotato;
+ 
 }
 function Update () {
 

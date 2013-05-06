@@ -48,7 +48,6 @@ function Update () {
 
 //keeps track of who is aiming at whom
 
-
 npc_black1_aimState = npc_black1_script.myCurrTarget;
 npc_white1_aimState = npc_white1_script.myCurrTarget;
 npc_grey1_aimState = npc_grey1_script.myCurrTarget;
