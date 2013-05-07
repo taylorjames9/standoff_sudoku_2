@@ -24,7 +24,7 @@ function Start () {
 
 function Update () {
 
-	if(sceneManager.shotFiredLackey > 0){
+	if(sceneManager.shotFiredLackey > 0 && !sceneManager.goodGuyIsDead){
 	//function: I fire my bullets at a steady rate at my target. 
 	
 	var instanceBullet = Instantiate(prefabBullet, transform.position, Quaternion.identity);

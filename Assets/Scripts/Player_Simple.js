@@ -37,7 +37,7 @@ function Update () {
 
 function aim(){
 
-
+if(!sceneManager.mainCharacterIsDead){
 if (Input.GetMouseButtonDown(0)) {
             var hit: RaycastHit;
             var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -55,10 +55,12 @@ if (Input.GetMouseButtonDown(0)) {
 					}
 				}
 		}
+		}
 }
 
 function shoot(){
 
+if(!sceneManager.mainCharacterIsDead){
 if (Input.GetMouseButtonDown(0)){
 		var rayo = Camera.main.ScreenPointToRay (Input.mousePosition);
 		var hito : RaycastHit;
@@ -76,6 +78,8 @@ if (Input.GetMouseButtonDown(0)){
 			
 			print("mainCharacter has shot");
 		}
+		
+	}
 }
 }
 }

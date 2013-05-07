@@ -36,10 +36,10 @@
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll'
 -i:UnityEditor
 'Assets/Scripts/BadGuy_Simple.js'
-'Assets/Scripts/GunShoot.js'
 'Assets/Scripts/Lackey_Simple.js'
 'Assets/Scripts/NPC_Script.js'
 'Assets/Scripts/Player_Simple.js'
+'Assets/Scripts/QButton.js'
 'Assets/Scripts/SceneManagerScript.js'
 'Assets/Scripts/SceneManager_Simple.js'
 'Assets/Scripts/bulletScript.js'

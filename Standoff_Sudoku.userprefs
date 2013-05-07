@@ -1,15 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/gotHit.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player_Simple.js">
     <Files>
-      <File FileName="Assets/Scripts/player.js" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/NPC_Script.js" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/BadGuy_Simple.js" Line="10" Column="30" />
-      <File FileName="Assets/Scripts/Lackey_Simple.js" Line="8" Column="30" />
-      <File FileName="Assets/Scripts/Player_Simple.js" Line="15" Column="1" />
-      <File FileName="Assets/Scripts/SceneManagerScript.js" Line="33" Column="1" />
-      <File FileName="Assets/Scripts/SceneManager_Simple.js" Line="13" Column="1" />
-      <File FileName="Assets/Scripts/gotHit.js" Line="12" Column="1" />
+      <File FileName="Assets/Scripts/BadGuy_Simple.js" Line="62" Column="5" />
+      <File FileName="Assets/Scripts/Lackey_Simple.js" Line="27" Column="70" />
+      <File FileName="Assets/Scripts/Player_Simple.js" Line="82" Column="3" />
+      <File FileName="Assets/Scripts/SceneManager_Simple.js" Line="20" Column="24" />
+      <File FileName="Assets/Scripts/gotHit.js" Line="22" Column="70" />
+      <File FileName="Assets/Scripts/bulletScript.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
