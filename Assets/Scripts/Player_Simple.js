@@ -67,7 +67,7 @@ if (Input.GetMouseButtonDown(0)){
 			var instanceBullet = Instantiate(prefabBullet, transform.position, Quaternion.identity);
 			instanceBullet.rigidbody.AddForce((myCurrTarget.transform.position - transform.position) * shootForce);
 			
-			Physics.IgnoreCollision(instanceBullet.collider, collider);
+			//Physics.IgnoreCollision(instanceBullet.collider, collider);
 			//Physics.IgnoreCollision(instanceBullet.collider, collider);
 			yield WaitForSeconds(1);
 			sceneManager.shotFired = true;
