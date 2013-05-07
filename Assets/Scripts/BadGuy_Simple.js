@@ -49,10 +49,14 @@ function Update () {
 	if(sceneManager.shotFired){
 	//function: I fire my bullets at a steady rate at my target. 
 	
-			//var instanceBullet = Instantiate(prefabBullet, transform.position, Quaternion.identity);
-			//instanceBullet.rigidbody.AddForce((myCurrTarget.transform.position - transform.position) * shootForce);
+			var instanceBullet = Instantiate(prefabBullet, transform.position, Quaternion.identity);
+			instanceBullet.rigidbody.AddForce((myCurrTarget.transform.position - transform.position) * shootForce);
 			
-			//Physics.IgnoreCollision(instanceBullet.collider, collider);
+			Physics.IgnoreCollision(instanceBullet.collider, collider);
+			
+			sceneManager.shotFired = !sceneManager.shotFired;
+			
+			
 	
 	}	
 }
