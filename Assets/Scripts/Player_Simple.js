@@ -15,6 +15,8 @@ var prefabBullet: Transform;
 var shootForce: float;
 var sceneManager : SceneManager_Simple;
 
+var aimingAt : boolean = false;
+
 
 function Start () {
 
@@ -46,9 +48,9 @@ if (Input.GetMouseButtonDown(0)) {
             if (Physics.Raycast(ray, hit)) {
             	if(hit.collider.gameObject.tag == "npc"){
              		var targetPosition = hit.point;
+             		Delay();
              		myCurrTarget = hit.collider.gameObject;
              		print("myCurrTarget = "+ myCurrTarget.name);
-             		
              		var targetRotation = Quaternion.LookRotation(targetPosition - transform.position);
 					transform.rotation = targetRotation;
 					print("mainCharacter has aimed");
@@ -65,13 +67,13 @@ if (Input.GetMouseButtonDown(0)){
 		var rayo = Camera.main.ScreenPointToRay (Input.mousePosition);
 		var hito : RaycastHit;
 	if (Physics.Raycast (rayo, hito)) {
-    	if(hito.collider.gameObject == myCurrTarget){
+    	if(hito.collider.gameObject == sceneManager.mainCharacter_aimState){
 			var instanceBullet = Instantiate(prefabBullet, transform.position, Quaternion.identity);
 			instanceBullet.rigidbody.AddForce((myCurrTarget.transform.position - transform.position) * shootForce);
 			
 			//Physics.IgnoreCollision(instanceBullet.collider, collider);
 			//Physics.IgnoreCollision(instanceBullet.collider, collider);
-			yield WaitForSeconds(0.4);
+			yield WaitForSeconds(0.6);
 			sceneManager.shotFired++;
 			yield WaitForSeconds(0.6);
 			sceneManager.shotFiredLackey++;
@@ -82,5 +84,9 @@ if (Input.GetMouseButtonDown(0)){
 	}
 }
 }
+}
+
+function Delay(){
+	yield WaitForSeconds(0.5);
 }
 
