@@ -31,8 +31,6 @@ npc_grey1_aimState = npc_black1;
 mainCharacter_aimState = npc_black1;
 lady_aimState = npc_grey1;
 
-
-
 }
 
 function Update () {
