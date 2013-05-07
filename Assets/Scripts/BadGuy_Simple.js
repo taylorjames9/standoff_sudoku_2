@@ -27,12 +27,15 @@ transform.rotation = targetRotation;
 }
 
 function Awake (){
-    InvokeRepeating("Switch", 6, 6);
+	if(!sceneManager.badGuyIsDead){
+    	InvokeRepeating("Switch", 6, 6);
+	}
 }
 
 
 function Update () {
 
+	if(!sceneManager.badGuyIsDead){
 	//Every 20 Seconds, the bad guy switches aim to the Good Guy or to the main character
 	if(even){
 		myCurrTarget = iNoLike;
@@ -46,7 +49,7 @@ function Update () {
 		transform.rotation = targetRotation;
 		}
 		
-	if(sceneManager.shotFired){
+	if(sceneManager.shotFired>0 && !sceneManager.badGuyIsDead){
 	//function: I fire my bullets at a steady rate at my target. 
 	
 			var instanceBullet = Instantiate(prefabBullet, transform.position, Quaternion.identity);
@@ -54,9 +57,9 @@ function Update () {
 			
 			Physics.IgnoreCollision(instanceBullet.collider, collider);
 			
-			sceneManager.shotFired = !sceneManager.shotFired;
+			sceneManager.shotFired = 0;
 			
-			
+			}
 	
 	}	
 }

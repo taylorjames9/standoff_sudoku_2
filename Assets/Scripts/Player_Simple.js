@@ -37,7 +37,7 @@ function Update () {
 
 function aim(){
 
-
+if(!sceneManager.mainCharacterIsDead){
 if (Input.GetMouseButtonDown(0)) {
             var hit: RaycastHit;
             var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -55,10 +55,12 @@ if (Input.GetMouseButtonDown(0)) {
 					}
 				}
 		}
+		}
 }
 
 function shoot(){
 
+if(!sceneManager.mainCharacterIsDead){
 if (Input.GetMouseButtonDown(0)){
 		var rayo = Camera.main.ScreenPointToRay (Input.mousePosition);
 		var hito : RaycastHit;
@@ -67,12 +69,17 @@ if (Input.GetMouseButtonDown(0)){
 			var instanceBullet = Instantiate(prefabBullet, transform.position, Quaternion.identity);
 			instanceBullet.rigidbody.AddForce((myCurrTarget.transform.position - transform.position) * shootForce);
 			
-			Physics.IgnoreCollision(instanceBullet.collider, collider);
 			//Physics.IgnoreCollision(instanceBullet.collider, collider);
-			yield WaitForSeconds(1);
-			sceneManager.shotFired = true;
+			//Physics.IgnoreCollision(instanceBullet.collider, collider);
+			yield WaitForSeconds(0.4);
+			sceneManager.shotFired++;
+			yield WaitForSeconds(0.6);
+			sceneManager.shotFiredLackey++;
+			
 			print("mainCharacter has shot");
 		}
+		
+	}
 }
 }
 }

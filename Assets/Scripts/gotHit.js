@@ -2,7 +2,11 @@
 
 
 var redPool: Transform;
-//var badGuyDead: boolean = false;
+var sceneManager: SceneManager_Simple;
+
+var mainCharacterIsDead: boolean = false;
+var badGuyIsDead: boolean = false;
+var goodGuyIsDead: boolean = false;
 
 function Start () {
 
@@ -15,13 +19,29 @@ function Update () {
 
 function OnTriggerEnter (other:Collider){
 
-	if(other.gameObject.tag =="bullet")
+	if(gameObject.tag == "mainGuy" && other.gameObject.tag =="bullet" && !sceneManager.mainCharacterIsDead)
 	{
 		print("Got hit!");
 		redPool.localScale += Vector3(1,0,1);
 		
-		//GetParent. GetParentScript tell the parent script that this person is dead. 
-		
-		
+		sceneManager.mainCharacterShotState++;	
 	}
+	
+	if(gameObject.tag == "BadGuy" && other.gameObject.tag =="bullet" && !sceneManager.badGuyIsDead)
+	{
+		print("Got hit!");
+		redPool.localScale += Vector3(1,0,1);
+		
+		sceneManager.badGuyShotState++;	
+	}
+	
+	if(gameObject.tag == "GoodGuy" && other.gameObject.tag =="bullet"  && !sceneManager.goodGuyIsDead)
+	{
+		print("Got hit!");
+		redPool.localScale += Vector3(1,0,1);
+		
+		sceneManager.goodShotState++;	
+	}
+
+
 }

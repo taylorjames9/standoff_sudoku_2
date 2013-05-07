@@ -20,20 +20,18 @@ function Start () {
 
   var targetRotation = Quaternion.LookRotation(myCurrTarget.transform.position - transform.position);
   transform.rotation = targetRotation;
-
-
 }
 
 function Update () {
 
-	if(sceneManager.shotFired){
+	if(sceneManager.shotFiredLackey > 0 && !sceneManager.goodGuyIsDead){
 	//function: I fire my bullets at a steady rate at my target. 
 	
 	var instanceBullet = Instantiate(prefabBullet, transform.position, Quaternion.identity);
 	instanceBullet.rigidbody.AddForce((myCurrTarget.transform.position - transform.position) * shootForce);
 	Physics.IgnoreCollision(instanceBullet.collider, collider);
 	
-	sceneManager.shotFired = !sceneManager.shotFired;
+	sceneManager.shotFiredLackey = 0;
 	
 	
 	}	
