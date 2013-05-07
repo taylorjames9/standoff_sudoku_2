@@ -10,7 +10,9 @@ function Start () {
 
 function Update () {
 
-
+if(shotFired){
+print("THE POP OFF");
+}
 
 
 }
