@@ -46,7 +46,7 @@ function Update () {
 		transform.rotation = targetRotation;
 		}
 		
-	if(sceneManager.shotFired){
+	if(sceneManager.shotFired>0){
 	//function: I fire my bullets at a steady rate at my target. 
 	
 			var instanceBullet = Instantiate(prefabBullet, transform.position, Quaternion.identity);
@@ -54,7 +54,7 @@ function Update () {
 			
 			Physics.IgnoreCollision(instanceBullet.collider, collider);
 			
-			sceneManager.shotFired = !sceneManager.shotFired;
+			sceneManager.shotFired = 0;
 			
 			
 	

@@ -1,8 +1,8 @@
 
 
 
-var shotFired: boolean = false;
-
+var shotFired: int = 0;
+var shotFiredLackey: int = 0;
 
 function Start () {
 
@@ -10,7 +10,7 @@ function Start () {
 
 function Update () {
 
-if(shotFired){
+if(shotFired>0){
 print("THE POP OFF");
 }
 

@@ -69,8 +69,11 @@ if (Input.GetMouseButtonDown(0)){
 			
 			//Physics.IgnoreCollision(instanceBullet.collider, collider);
 			//Physics.IgnoreCollision(instanceBullet.collider, collider);
-			yield WaitForSeconds(1);
-			sceneManager.shotFired = true;
+			yield WaitForSeconds(0.4);
+			sceneManager.shotFired++;
+			yield WaitForSeconds(0.6);
+			sceneManager.shotFiredLackey++;
+			
 			print("mainCharacter has shot");
 		}
 }
