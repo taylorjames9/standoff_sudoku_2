@@ -38,7 +38,6 @@ var npc_black1_script:BadGuy_Simple=npc_black1.GetComponent("BadGuy_Simple");
 var npc_white1_script: Lackey_Simple= npc_white1.GetComponent("Lackey_Simple");
 var mainCharacter_script: Player_Simple = mainCharacter.GetComponent("Player_Simple");
 
-
 npc_black1_aimState = npc_black1_script.myCurrTarget;
 npc_white1_aimState = npc_white1_script.myCurrTarget;
 mainCharacter_aimState = mainCharacter_script.myCurrTarget;

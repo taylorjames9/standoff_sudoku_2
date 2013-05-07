@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\bulletScript.js" />
      <Compile Include="Assets\Scripts\gotHit.js" />
      <Compile Include="Assets\Scripts\player.js" />
+     <Compile Include="Assets\Scripts\resetBttn_Script.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
