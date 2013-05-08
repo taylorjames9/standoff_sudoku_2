@@ -28,7 +28,7 @@ transform.rotation = targetRotation;
 
 function Awake (){
 	if(!sceneManager.badGuyIsDead){
-    	InvokeRepeating("Switch", 6, 6);
+    	InvokeRepeating("Switch", 2, 3);
 	}
 }
 

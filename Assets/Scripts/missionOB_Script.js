@@ -35,7 +35,7 @@ function Update () {
 
 function Delay(){
 
-yield WaitForSeconds (2);
+yield WaitForSeconds (0.5);
 thisSlide.position.z = myDropZ;
 dropped = true;
 

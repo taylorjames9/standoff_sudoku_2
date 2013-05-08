@@ -32,6 +32,7 @@
 -define:UNITY_4_1
 -r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/iPhonePlayer/Managed/UnityEngine.dll'
 -disable-eval:eval is not supported on the current build target (iPhone).
+'Assets/Scripts/Advance_Script.js'
 'Assets/Scripts/BadGuy_Simple.js'
 'Assets/Scripts/Lackey_Simple.js'
 'Assets/Scripts/NPC_Script.js'
@@ -40,6 +41,9 @@
 'Assets/Scripts/SceneManagerScript.js'
 'Assets/Scripts/SceneManager_Simple.js'
 'Assets/Scripts/bulletScript.js'
+'Assets/Scripts/closeScript.js'
 'Assets/Scripts/gotHit.js'
+'Assets/Scripts/missionOB_Script.js'
 'Assets/Scripts/player.js'
 'Assets/Scripts/resetBttn_Script.js'
+'Assets/Scripts/tut_script.js'
