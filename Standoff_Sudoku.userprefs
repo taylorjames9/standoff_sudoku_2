@@ -1,6 +1,18 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/missionOB_Script.js">
+    <Files>
+      <File FileName="Assets/Scripts/BadGuy_Simple.js" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Player_Simple.js" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/tut_script.js" Line="15" Column="39" />
+      <File FileName="Assets/Scripts/missionOB_Script.js" Line="16" Column="39" />
+      <File FileName="Assets/Scripts/Advance_Script.js" Line="23" Column="2" />
+      <File FileName="Assets/Scripts/resetBttn_Script.js" Line="14" Column="33" />
+      <File FileName="Assets/Scripts/closeScript.js" Line="25" Column="48" />
+      <File FileName="Assets/Scripts/QButton.js" Line="30" Column="1" />
+      <File FileName="Assets/Scripts/SceneManager_Simple.js" Line="28" Column="15" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
