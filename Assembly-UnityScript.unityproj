@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\bulletScript.js" />
      <Compile Include="Assets\Scripts\closeScript.js" />
      <Compile Include="Assets\Scripts\gotHit.js" />
+     <Compile Include="Assets\Scripts\missionOB_Script.js" />
      <Compile Include="Assets\Scripts\player.js" />
      <Compile Include="Assets\Scripts\resetBttn_Script.js" />
      <Compile Include="Assets\Scripts\tut_script.js" />
