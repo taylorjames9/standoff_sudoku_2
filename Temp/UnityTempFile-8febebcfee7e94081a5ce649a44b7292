@@ -45,3 +45,4 @@
 'Assets/Scripts/bulletScript.js'
 'Assets/Scripts/gotHit.js'
 'Assets/Scripts/player.js'
+'Assets/Scripts/resetBttn_Script.js'

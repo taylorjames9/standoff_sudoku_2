@@ -30,11 +30,8 @@
 -define:ENABLE_SHADOWS
 -define:UNITY_4_1_2
 -define:UNITY_4_1
--define:ENABLE_PROFILER
--define:UNITY_EDITOR
--r:'/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll'
--r:'/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll'
--i:UnityEditor
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/iPhonePlayer/Managed/UnityEngine.dll'
+-disable-eval:eval is not supported on the current build target (iPhone).
 'Assets/Scripts/BadGuy_Simple.js'
 'Assets/Scripts/Lackey_Simple.js'
 'Assets/Scripts/NPC_Script.js'
@@ -45,3 +42,4 @@
 'Assets/Scripts/bulletScript.js'
 'Assets/Scripts/gotHit.js'
 'Assets/Scripts/player.js'
+'Assets/Scripts/resetBttn_Script.js'
