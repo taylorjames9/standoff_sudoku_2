@@ -21,7 +21,7 @@ function OnTriggerEnter (other:Collider){
 
 	if(gameObject.tag == "mainGuy" && other.gameObject.tag =="bullet" && !sceneManager.mainCharacterIsDead)
 	{
-		print("Got hit!");
+		//print("Got hit!");
 		redPool.localScale += Vector3(1,0,1);
 		
 		sceneManager.mainCharacterShotState++;	
@@ -29,7 +29,7 @@ function OnTriggerEnter (other:Collider){
 	
 	if(gameObject.tag == "BadGuy" && other.gameObject.tag =="bullet" && !sceneManager.badGuyIsDead)
 	{
-		print("Got hit!");
+		//print("Got hit!");
 		redPool.localScale += Vector3(1,0,1);
 		
 		sceneManager.badGuyShotState++;	
@@ -37,7 +37,7 @@ function OnTriggerEnter (other:Collider){
 	
 	if(gameObject.tag == "GoodGuy" && other.gameObject.tag =="bullet"  && !sceneManager.goodGuyIsDead)
 	{
-		print("Got hit!");
+		//print("Got hit!");
 		redPool.localScale += Vector3(1,0,1);
 		
 		sceneManager.goodShotState++;	

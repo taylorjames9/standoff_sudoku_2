@@ -50,10 +50,10 @@ if (Input.GetMouseButtonDown(0)) {
              		var targetPosition = hit.point;
              		Delay();
              		myCurrTarget = hit.collider.gameObject;
-             		print("myCurrTarget = "+ myCurrTarget.name);
+             		//print("myCurrTarget = "+ myCurrTarget.name);
              		var targetRotation = Quaternion.LookRotation(targetPosition - transform.position);
 					transform.rotation = targetRotation;
-					print("mainCharacter has aimed");
+					//print("mainCharacter has aimed");
 					}
 				}
 		}
@@ -78,7 +78,7 @@ if (Input.GetMouseButtonDown(0)){
 			yield WaitForSeconds(0.6);
 			sceneManager.shotFiredLackey++;
 			
-			print("mainCharacter has shot");
+			//print("mainCharacter has shot");
 		}
 		
 	}
