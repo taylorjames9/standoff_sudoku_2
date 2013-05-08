@@ -5,11 +5,13 @@ var sceneManager: SceneManager_Simple;
 var myLiftZ: float;
 var myOriginalZ: float;
 
+var timeLoop: float;
+var lerpedColor : Color;
+
 function Start () {
 
 myOriginalZ = transform.position.z;
-
-
+//print("start color is "+  gameObject.getColor());
 
 }
 
@@ -18,7 +20,11 @@ function Update () {
 
 
 if(sceneManager.badGuyIsDead){
+	Delay();
 	transform.position.z = myLiftZ;
+	timeLoop = Mathf.PingPong(Time.time, 1.3);
+	lerpedColor = Color.Lerp(Color (0, 0, 0, 0), Color (0, 0, 0, 1), timeLoop);
+    renderer.material.color = lerpedColor;
 }
 
 if (Input.GetMouseButtonDown(0)) {
@@ -35,7 +41,8 @@ if (Input.GetMouseButtonDown(0)) {
 					}
 				}
 			}
+}
 
-
-
+function Delay(){
+	yield WaitForSeconds(3);
 }

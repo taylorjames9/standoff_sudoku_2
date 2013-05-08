@@ -6,6 +6,7 @@ var amountFall: float;
 var dropEven: int = 0;
 var GuiInfoOriginalZPosition: float;
 var guiOriginalVec: Vector3;
+var sceneManager : SceneManager_Simple;
 
 
 //var pointA:Vector3;
@@ -25,6 +26,8 @@ function Start () {
 }
 
 function Update () {
+
+if(!sceneManager.guiPresent){
 
     rate = 1.0/time;
     if (i < 1.0)
@@ -64,6 +67,7 @@ if (Input.GetMouseButtonDown(0) && dropEven%2 == 0){
    
    			}
 		}
+	}
 	}
 }
 

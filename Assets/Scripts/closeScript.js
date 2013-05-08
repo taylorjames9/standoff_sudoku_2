@@ -2,6 +2,7 @@
 
 var myName: GameObject;
 var closedHit: boolean = false;
+var sceneManager: SceneManager_Simple;
 
 function Start () {
 
@@ -17,10 +18,11 @@ if (Input.GetMouseButtonDown(0)) {
             Debug.DrawRay (ray.origin, ray.direction * 100, Color.red);
             
             if (Physics.Raycast(ray, hit)) {
-            	if(hit.collider.gameObject.name == myName.gameObject.name){
+            	if(hit.collider.gameObject.name == gameObject.name){
              		
              		closedHit = true;
-             		print("HIT CLOSE BTN");
+             		//print("HIT CLOSE BTN");
+             		sceneManager.guiPresent = false;
              	
 					}
 				}

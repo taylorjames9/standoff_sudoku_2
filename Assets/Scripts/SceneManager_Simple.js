@@ -25,6 +25,8 @@ var mainCharacterShotState: int = 0;
 var badGuyShotState: int = 0;
 var goodShotState: int = 0;
 
+var guiPresent: boolean = true;
+
 
 
 function Start () {
