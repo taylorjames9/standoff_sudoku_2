@@ -36,7 +36,7 @@ if (Input.GetMouseButtonDown(0)) {
             	if(hit.collider.gameObject.name == gameObject.name){
              		
              	//load next level
-             	Application.LoadLevel ("Standoff_Sudoku_Simplest");
+             	Application.LoadLevel ("Standoff_Sudoku_Level_2");
              	
 					}
 				}

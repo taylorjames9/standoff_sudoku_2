@@ -16,7 +16,7 @@ if (Input.GetMouseButtonDown(0)) {
             Debug.DrawRay (ray.origin, ray.direction * 100, Color.red);
        if (Physics.Raycast(ray, hit)) {
        		if(hit.collider.gameObject.name == "ResetBttn")
-        		Application.LoadLevel ("Standoff_Sudoku_Simplest");
+        		Application.LoadLevel ("Standoff_Sudoku_Level_1");
         }
 }
 
