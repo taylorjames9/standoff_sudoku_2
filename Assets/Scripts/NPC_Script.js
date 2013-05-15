@@ -8,6 +8,10 @@ var iNoLike1: GameObject;
 var iNoLike2: GameObject;
 var iNoLike3: GameObject;
 
+var myArm1: GameObject;
+var myArm2: GameObject;
+var myArm3: GameObject;
+
 var jumpy: float;
 var retaliate: float;
 var frequnecyOfBullets: float;
@@ -22,6 +26,8 @@ var playerScript : player;
 var myAttackersName: String;
 
 var targetRotation: Quaternion;
+
+
 
 function Start () {
 

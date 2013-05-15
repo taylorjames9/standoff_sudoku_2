@@ -21,7 +21,6 @@ if (Input.GetMouseButtonDown(0)) {
             	if(hit.collider.gameObject.name == gameObject.name){
              		
              		closedHit = true;
-             		//print("HIT CLOSE BTN");
              		sceneManager.guiPresent = false;
              	
 					}
